@@ -50,9 +50,9 @@
 //
 // Servos
 //
-#define SERVO0_PIN                            22  // Motor header MX1
+#define SERVO0_PIN                             4  // Motor header MX1
 #define SERVO1_PIN                            23  // Motor header MX2
-#define SERVO2_PIN                            24  // Motor header MX3
+#define SERVO2_PIN                            -1  // Motor header MX3
 #define SERVO3_PIN                             5  // PWM header pin 5
 
 //
@@ -62,7 +62,7 @@
 #define X_MAX_PIN                             24
 #define Y_MIN_PIN                             11
 #define Y_MAX_PIN                             23
-#define Z_MIN_PIN                             10
+#define Z_MIN_PIN                             22
 #define Z_MAX_PIN                             30
 
 //
@@ -90,6 +90,10 @@
 #define Z_STEP_PIN                            35
 #define Z_DIR_PIN                             47
 #define Z_ENABLE_PIN                          27
+
+#define Z2_STEP_PIN                           33
+#define Z2_DIR_PIN                            42
+#define Z2_ENABLE_PIN                         25
 
 #define E0_STEP_PIN                           34
 #define E0_DIR_PIN                            43
@@ -135,8 +139,8 @@
 #ifndef FAN_PIN
   #define FAN_PIN                              8
 #endif
-#define FAN1_PIN                               6
-#define FAN2_PIN                               2
+#define FAN1_PIN                               2
+#define FAN2_PIN                               6
 
 //
 // Misc. Functions
@@ -156,9 +160,9 @@
 //
 // M3/M4/M5 - Spindle/Laser Control
 //
-#define SPINDLE_LASER_PWM_PIN                 45  // Hardware PWM
-#define SPINDLE_LASER_ENA_PIN                 31  // Pullup!
-#define SPINDLE_DIR_PIN                       32
+#define SPINDLE_LASER_PWM_PIN              NoPin  // Hardware PWM
+#define SPINDLE_LASER_ENA_PIN              NoPin  // Pullup!
+#define SPINDLE_DIR_PIN                    NoPin
 
 //
 // SPI for Max6675 or Max31855 Thermocouple
@@ -220,8 +224,8 @@
       #define BEEPER_PIN                      79  // AUX-4
 
       // AUX-2
-      #define BTN_EN1                         76
-      #define BTN_EN2                         77
+      #define BTN_EN1                         64
+      #define BTN_EN2                         63
       #define BTN_ENC                         78
 
       #define SD_DETECT_PIN                   81
